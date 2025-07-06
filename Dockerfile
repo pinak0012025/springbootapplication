@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy JAR file
-COPY target/springbootapplication.jar app.jar
+COPY target/spring-boot-starter-parent.jar app.jar
 
 # Expose port
 EXPOSE 8080
