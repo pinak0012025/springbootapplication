@@ -5,7 +5,8 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy JAR file
-COPY target/springbootapplication.jar app.jar
+COPY target/Shopping_Cart-0.0.1-SNAPSHOT.jar app.jar
+
 
 # Expose port
 EXPOSE 8080
