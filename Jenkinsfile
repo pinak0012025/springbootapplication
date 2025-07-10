@@ -13,7 +13,7 @@ pipeline{
         }
         stage ('Buid the application using maven wrapper'){
             steps{
-                sh '/.mvnw clean package -DskipTests'
+                sh './mvnw clean package -DskipTests'
             }
         }
         stage ('Build Docker Imgae'){
