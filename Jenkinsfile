@@ -30,14 +30,6 @@ pipeline{
                 }
             }
         }
-    Post{
-        success{
-            echo "Build succcessfully executed"
-        }
-        failure{
-            echo "Build failure"
-        }
-    }    
-        
+            
     }
 }
