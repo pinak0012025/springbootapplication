@@ -26,7 +26,8 @@ pipeline{
         stage('Push the Docker Image'){
             steps{
                 script{
-                    docker.withRegistry('https://index.docker.io/v1/' , "${DOCKER_HUB_CREDENTIALS}")
+                    docker.withRegistry('https://index.docker.io/v1/' , "${DOCKER_HUB_CREDENTIALS}"){
+                        dockerImage.push("latest")
                 }
             }
         }
