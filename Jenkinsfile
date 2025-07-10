@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        DOCKER_IMAGE = "pinak005/springboot-shopping-cart"
+        DOCKER_IMAGE = "pinakdas005/springboot-shopping-cart"
         DOCKER_HUB_CREDENTIALS = "jenkins"
     }
     stages{
