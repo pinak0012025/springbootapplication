@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS FITNESS | The Battle Within</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF2E2E; /* Electric Red */
+            --bg: #0A0A0A;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            overflow-x: hidden;
+        }
+        .font-heading { font-family: 'Archivo Black', sans-serif; }
+
+        /* Aura-inspired Skewed Elements */
+        .skew-btn {
+            transform: skewX(-15deg);
+            transition: all 0.3s ease;
+        }
+        .skew-btn > span {
+            display: inline-block;
+            transform: skewX(15deg);
+        }
+        .skew-btn:hover {
+            background-color: white;
+            color: black;
+            transform: skewX(-15deg) scale(1.05);
+        }
+
+        /* Halftone Background Pattern */
+        .halftone-bg {
+            background-image: radial-gradient(circle, #222 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Animated Ticker */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .ticker-track {
+            display: flex;
+            width: 200%;
+            animation: scroll 20s linear infinite;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-heading text-2xl tracking-tighter italic">VS <span class="text-[#FF2E2E]">FITNESS</span></div>
+            <div class="hidden md:flex gap-8 font-bold uppercase text-sm tracking-widest">
+                <a href="#programs" class="hover:text-[#FF2E2E]">Programs</a>
+                <a href="#facility" class="hover:text-[#FF2E2E]">The Arena</a>
+                <a href="#about" class="hover:text-[#FF2E2E]">Philosophy</a>
+            </div>
+            <a href="#join" class="skew-btn bg-[#FF2E2E] px-6 py-2 font-black uppercase text-sm italic">
+                <span>Join The Fight</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden halftone-bg">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10"></div>
+        
+        <!-- Large Background Text -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-heading text-[20vw] text-outline leading-none select-none opacity-20 whitespace-nowrap z-0">
+            YOU VS YOU
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-20 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="font-heading text-6xl md:text-8xl leading-none italic uppercase mb-6">
+                    Enter <br><span class="text-[#FF2E2E]">The Arena.</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-md">
+                    Victory isn't found in the trophy. It's found in the sweat, the struggle, and the refusal to quit. Your transformation starts now.
+                </p>
+                <div class="flex gap-4">
+                    <button class="skew-btn bg-white text-black px-8 py-4 font-black uppercase italic">
+                        <span>Book Free Trial</span>
+                    </button>
+                    <button class="skew-btn border border-white px-8 py-4 font-black uppercase italic hover:bg-white hover:text-black">
+                        <span>View Rates</span>
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-[#FF2E2E]/20 blur-3xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" 
+                     alt="Athlete" class="relative z-10 rounded-2xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Ticker -->
+    <div class="bg-[#FF2E2E] py-4 overflow-hidden border-y-2 border-black relative z-30">
+        <div class="ticker-track">
+            <!-- Repeated for seamless loop -->
+            <div class="flex gap-12 items-center px-6">
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">24/7 Access</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">Elite Coaching</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">Modern Equipment</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">MMA Zone</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">Powerlifting</span>
+                <span class="text-black text-3xl">✦</span>
+            </div>
+            <div class="flex gap-12 items-center px-6">
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">24/7 Access</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">Elite Coaching</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">Modern Equipment</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">MMA Zone</span>
+                <span class="text-black text-3xl">✦</span>
+                <span class="font-heading text-2xl text-black italic uppercase whitespace-nowrap">Powerlifting</span>
+                <span class="text-black text-3xl">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facility Bento Grid -->
+    <section id="facility" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-5xl uppercase italic mb-4">The Training Grounds</h2>
+            <p class="text-gray-500 uppercase tracking-[0.3em] text-sm">Engineered for Performance</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[800px]">
+            <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-zinc-900">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-500">
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="font-heading text-3xl italic uppercase">Iron Heaven</h3>
+                    <p class="text-gray-300">Free weights & Power racks</p>
+                </div>
+            </div>
+            <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-zinc-900">
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-500">
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="font-heading text-2xl italic uppercase">The Cage</h3>
+                    <p class="text-gray-300">MMA & Combat Training</p>
+                </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-xl bg-zinc-900">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-500">
+                <div class="absolute bottom-4 left-4">
+                    <h3 class="font-heading text-xl italic uppercase">Cardio</h3>
+                </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-xl bg-zinc-900">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-500">
+                <div class="absolute bottom-4 left-4">
+                    <h3 class="font-heading text-xl italic uppercase">Recovery</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Social Proof -->
+    <section class="bg-white text-black py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+            <div class="md:col-span-1">
+                <h2 class="font-heading text-4xl italic uppercase leading-tight mb-4">They Fought. <br>They Won.</h2>
+                <div class="w-20 h-2 bg-[#FF2E2E]"></div>
+            </div>
+            <div class="md:col-span-2 grid md:grid-cols-2 gap-8">
+                <div class="p-8 border-l-4 border-[#FF2E2E] bg-gray-50">
+                    <p class="italic mb-4">"The atmosphere here is electric. It's not a gym, it's a battleground for your better self. Lost 30lbs and found my confidence."</p>
+                    <p class="font-bold uppercase tracking-widest text-sm">— Marcus T.</p>
+                </div>
+                <div class="p-8 border-l-4 border-[#FF2E2E] bg-gray-50">
+                    <p class="italic mb-4">"The elite coaching is real. They don't just show you how; they push you until you didn't think you had anything left."</p>
+                    <p class="font-bold uppercase tracking-widest text-sm">— Sarah L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="join" class="py-32 px-6 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#FF2E2E] opacity-10 halftone-bg"></div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="font-heading text-6xl md:text-8xl italic uppercase mb-8">Stop Dreaming. <br>Start Fighting.</h2>
+            <p class="text-xl mb-12 text-gray-400">Join VS Fitness today and get your first week 100% free. No strings, just results.</p>
+            <form class="flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="ENTER YOUR EMAIL" class="flex-1 bg-white/5 border border-white/20 p-4 font-bold tracking-widest text-white outline-none focus:border-[#FF2E2E]">
+                <button class="skew-btn bg-[#FF2E2E] px-12 py-4 font-black uppercase italic text-lg">
+                    <span>Get Access Now</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="font-heading text-xl italic uppercase">VS <span class="text-[#FF2E2E]">FITNESS</span></div>
+            <div class="flex gap-8 text-gray-500 font-bold uppercase text-xs tracking-tighter">
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">TikTok</a>
+                <a href="#" class="hover:text-white">YouTube</a>
+            </div>
+            <div class="text-gray-600 text-xs uppercase tracking-widest">
+                © 2024 VS Fitness. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
